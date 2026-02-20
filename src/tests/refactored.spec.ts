@@ -4,7 +4,6 @@ import { Order, IOrderRepository, IPaymentStrategy, INotificationService } from 
 
 describe("OrderService SOLID Tests", () => {
     it("should process order successfully", () => {
-        // Тепер TypeScript чітко бачить, що pay повертає true (boolean)
         const mockRepo: IOrderRepository = { save: jest.fn() };
         const mockPayment: IPaymentStrategy = { pay: jest.fn(() => true) };
         const mockNotifier: INotificationService = { send: jest.fn() };
